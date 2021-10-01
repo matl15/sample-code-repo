@@ -27,6 +27,8 @@ WORKDIR /dist
 RUN cp /build/podtatoserver .
 
 
+FROM scratch
+
 COPY --from=builder /dist/podtatoserver /
 COPY /static  /static
 
