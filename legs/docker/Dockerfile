@@ -26,8 +26,6 @@ WORKDIR /dist
 # Copy binary from build to main folder
 RUN cp /build/podtatoserver .
 
-# Build a small image
-FROM golang:1.11
 
 COPY --from=builder /dist/podtatoserver /
 COPY /static  /static
